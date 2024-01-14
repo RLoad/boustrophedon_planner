@@ -103,10 +103,10 @@ int main(int argc, char** argv)
   goal.property.polygon.points[0].x = 0;
   goal.property.polygon.points[0].y = 0;
   goal.property.polygon.points[1].x = 0;
-  goal.property.polygon.points[1].y = 10;
-  goal.property.polygon.points[2].x = 10;
-  goal.property.polygon.points[2].y = 10;
-  goal.property.polygon.points[3].x = 10;
+  goal.property.polygon.points[1].y = 0.5;
+  goal.property.polygon.points[2].x = 0.5;
+  goal.property.polygon.points[2].y = 0.5;
+  goal.property.polygon.points[3].x = 0.5;
   goal.property.polygon.points[3].y = 0;
 
   goal.robot_position.pose.orientation.w = 1.0;
@@ -119,6 +119,8 @@ int main(int argc, char** argv)
   {
     if (got_initial_pose)
     {
+      ros::Time start_time = ros::Time::now();
+
       goal.robot_position = initial_pose;
       // goal.robot_position.header = goal.property.header;
       // goal.robot_position.pose.position.x = 1.0;
@@ -149,6 +151,11 @@ int main(int argc, char** argv)
       path_pub.publish(path);
 
       got_initial_pose = false;
+
+      ros::Time end_time = ros::Time::now();
+      ros::Duration elapsed_time = end_time - start_time;
+      ROS_INFO_STREAM("Time elapsed: " << elapsed_time.toSec() << " seconds");
+
     }
     ros::spinOnce();
     loop_rate.sleep();
