@@ -75,6 +75,15 @@ Visualization Manager:
       Topic: /result_path
       Unreliable: false
       Value: true
+    - Alpha: 1
+      Class: rviz/Polygon
+      Color: 25; 255; 0
+      Enabled: true
+      Name: Polygon
+      Queue Size: 10
+      Topic: /input_polygon
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -103,7 +112,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.666421413421631
+      Distance: 4.017009735107422
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -111,17 +120,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.09105709940195084
-        Y: 0.16681629419326782
-        Z: -0.20329035818576813
+        X: 0.3428371250629425
+        Y: -0.1822476089000702
+        Z: -0.11665038019418716
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.7303980588912964
+      Pitch: 0.7653979063034058
       Target Frame: <Fixed Frame>
-      Yaw: 0.7803980112075806
+      Yaw: 0.8803976774215698
     Saved: ~
 Window Geometry:
   Displays:
